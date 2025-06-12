@@ -1,4 +1,3 @@
-alert("Your Trial Period Ends on 13/5/2025")
 let customerData = JSON.parse(localStorage.getItem("customers")) || {};
 function updateDatalist() {
   let dataList = document.getElementById("nameList");
@@ -23,6 +22,7 @@ document.getElementById("customerName").addEventListener("input", function () {
 });
 
 function saveAndContinue() {
+  alert("Your Trial Period Ends on 13/5/2025")
   let name = document.getElementById("customerName").value.trim();
   let phone = document.getElementById("customerPhone").value.trim();
   let address = document.getElementById("customerAddress").value.trim();
