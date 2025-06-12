@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate high-quality PDF receipts instantly with our online receipt generator. Easy, fast, and free!">
+  <meta property="og:description" content="Generate high-quality PDF receipts instantly with our online receipt generator. Easy, fast, and free!">
+  <meta property="og:image" content="android-chrome-512x512.png">
+  <meta property="og:title" content="Receipt Generator - Create Professional Receipts">
+  <meta property="og:url" content="https://dynamicshubham.github.io/hc/">
+  <title>Receipt Generator - Create Professional Receipts</title>
+  <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Receipt Generator</h1>
+    
+    <!-- Customer details section -->
+    <div id="customerDetails">
+      <label for="customerName">Customer Name:</label>
+      <input list="nameList" type="text" id="customerName" placeholder="Enter your name" required>
+      <datalist id="nameList"></datalist>
+
+      <label for="customerPhone">Customer Phone:</label>
+      <input type="number" id="customerPhone" placeholder="Enter your Phone number" required>
+
+      <label for="customerAddress">Customer Address:</label>
+      <input type="text" id="customerAddress" placeholder="Enter your Address" required>
+
+      <button id="continue" onclick="saveAndContinue()">Continue</button>
+    </div>
+
+    <!-- Item details section (hidden initially) -->
+    <div id="itemDetails" style="display: none;">
+      <form id="itemForm">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" list="itemList" placeholder="Enter item name" required>
+        <datalist id="itemList">
+        </datalist>
+
+        <label for="itemQuantity">Item Quantity:</label>
+        <input type="number" id="itemQuantity" placeholder="Enter Quantity" required>
+
+        <label for="itemMRP">MRP (in ₹):</label>
+        <input type="number" id="itemMRP" placeholder="Enter item MRP" required>
+        
+        <label for="itemPrice">Item Price Per Piece (in ₹):</label>
+        <input type="number" id="itemPrice" placeholder="Enter item price per piece" required>
+
+        <button type="button" onclick="addItem()">Add Item</button>
+      </form>
+
+      <label for="received">Amount received ₹:</label>
+      <input type="number" id="received" placeholder="Enter the Amount Received" required>
+    </div>
+
+    <div id="receipt"></div>
+
+    <button id="generateBtn" onclick="generatePDF()">Generate PDF</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
