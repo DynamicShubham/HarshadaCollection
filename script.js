@@ -1,3 +1,4 @@
+alert("Your Trial Period Ends on 13/5/2025")
 let customerData = JSON.parse(localStorage.getItem("customers")) || {};
 function updateDatalist() {
   let dataList = document.getElementById("nameList");
