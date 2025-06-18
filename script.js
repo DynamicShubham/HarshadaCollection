@@ -11,7 +11,6 @@ function updateDatalist() {
 
 document.getElementById("customerName").addEventListener("input", function () {
   let selectedName = this.value.trim();
-
   if (customerData[selectedName]) {
     document.getElementById("customerPhone").value = customerData[selectedName].phone;
     document.getElementById("customerAddress").value = customerData[selectedName].address;
